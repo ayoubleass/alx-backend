@@ -45,7 +45,7 @@ class Server:
         """
         indexed_dataset = self.indexed_dataset()
         assert index is not None and index >= 0 and\
-                index <= max(indexed_dataset.keys())
+            index <= max(indexed_dataset.keys())
         start_index = index if index else 0
         end = (start_index + page_size) + 1
         next_index = 0

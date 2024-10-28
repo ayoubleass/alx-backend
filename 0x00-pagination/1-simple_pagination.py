@@ -36,10 +36,10 @@ class Server:
         """
         Returns a dataset from csv file.
         """
-        assert type(page) == int and type(page_size) === int
+        assert isinstance(page, int) and isinstance(page_size, int)
         assert page > 0 and page_size > 0
         start_index, end_index = index_range(page, page_size)
         data = self.dataset()
-        if len(data) < start_index:
+        if len(data) < end_index:
             return []
         return data[start_index:end_index]
